@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br/> <br/> <br/> <br/>
+    {#    <div class="input-group">#}
+    {#        <form class="" action="" method="post" enctype="multipart/form-data">#}
+    {#            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" name="csvfile" value="">#}
+    {#            <input class="btn btn-primary" id="inputGroupFileAddon04" onclick="upload()" type="submit" name="" value="Submit">#}
+    {#        </form>#}
+    {#    </div>#}
+    {#    <div class="input-group">#}
+    {#        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04"#}
+    {#               aria-label="Upload">#}
+    {#        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>#}
+    {#    </div>#}
+    <br/> <br/>
+    <h1>Upload</h1>
+    <br/> <br/>
+    <div class="containerOnStart">
+        <div class="progress-bar"></div>
+    </div>
+    <br/> <br/>
+    <div class="input-group">
+        <form class="" action="" method="post" enctype="multipart/form-data">
+            <div class="no1">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-label="Upload"
+                       aria-describedby="inputGroupFileAddon04" name="csvfile" value="">
+            </div>
+            <div class="no1">
+                <input class="btn btn-primary" id="inputGroupFileAddon04" onclick="upload()" type="submit" name=""
+                       value="Submit">
+            </div>
+        </form>
+    </div>
+    <script async defer>
+        function upload() {
+            var a = 0;
+            const progressBar = document.querySelector('.progress-bar')
+            progressBar.setAttribute('id', 'play-animation')
+        }
+    </script>
+    <style>
+        .no1 {
+            display: inline-block;
+        }
+
+        #play-animation {
+            animation: progress-animation 2s forwards;
+        }
+
+        @keyframes progress-animation {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        .containerOnStart .progress-bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 7px;
+            background-color: #6c55f9;
+        }
+
+        .containerOnStart {
+            height: 20px;
+            background-color: #CCC;
+            position: relative;
+            border-radius: 7px;
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: #009686;
+        {#transform: 0.5s;#} color: white;
+        }
+
+        td {
+            border-top: 5px solid black;
+            padding-right: 15px;
+        }
+    </style>
+{% endblock %}
